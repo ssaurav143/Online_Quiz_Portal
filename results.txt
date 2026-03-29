@@ -1,0 +1,9 @@
+data=null null 0 FAIL
+data=null null 2 FAIL
+data=123 Satya 7 PASS
+730 Satu 7 PASS
+5730 SatyaSaurav 7 PASS
+24155730 Satya Saurav 10 PASS
+123456789 Satu 1 FAIL
+567 Saurav 10 PASS
+123 SSaurav 4 FAIL

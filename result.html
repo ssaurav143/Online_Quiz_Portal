@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+</head>
+
+<body>
+
+<h2>Quiz Result</h2>
+
+<h3 id="score"></h3>
+<h3 id="status"></h3>
+
+<script>
+
+let score = localStorage.getItem("quizScore")
+let id = localStorage.getItem("sid")
+let name = localStorage.getItem("sname")
+
+document.getElementById("score").innerHTML = "Your Score: " + score
+
+let status
+
+if(score >= 5)
+status = "PASS"
+else
+status = "FAIL"
+
+document.getElementById("status").innerHTML = status
+
+// ✅ SEND ONLY ONCE
+if(!sessionStorage.getItem("saved"))
+{
+    let data = id + " " + name + " " + score + " " + status
+
+    fetch("http://localhost:8080/save?data=" + data)
+
+    sessionStorage.setItem("saved", "true")
+}
+
+</script>
+
+</body>
+</html>

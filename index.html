@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Online Quiz Portal</h2>
+
+<form onsubmit="saveUser()" action="quiz.html" autocomplete="off">
+
+<div class="form-group">
+<label>Student ID</label><br>
+<input type="text" id="sid" required autocomplete="off">
+</div>
+
+<div class="form-group">
+<label>Student Name</label><br>
+<input type="text" id="sname" required autocomplete="off">
+</div>
+
+<button type="submit">Start Quiz</button>
+
+</form>
+
+<script>
+function saveUser()
+{
+localStorage.setItem("sid", document.getElementById("sid").value)
+localStorage.setItem("sname", document.getElementById("sname").value)
+}
+</script>
+
+<h3>Instructions</h3>
+
+<ul>
+<li>10 questions will be asked</li>
+<li>Select one answer</li>
+<li>Score will be shown after submission</li>
+</ul>
+
+</body>
+</html>
